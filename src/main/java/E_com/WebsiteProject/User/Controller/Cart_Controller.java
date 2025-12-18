@@ -16,7 +16,7 @@ import E_com.WebsiteProject.User.Service.Cart_Service;
 import E_com.WebsiteProject.User.entity.Cart;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:5174")
+@CrossOrigin(origins = "http://localhost:5173")
 public class Cart_Controller {
 	
 	@Autowired

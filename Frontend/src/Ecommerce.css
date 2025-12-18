@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.Ecommerce{
+   
+    background-color: white;
+   
+}
+.Ecommerce nav{
+    
+    height: 70px;
+    width: 100%;
+    background-color: rgba(127, 255, 212, 0.344);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+    
+}
+.left a{
+    color: Black;
+    text-decoration: none;
+
+}
+
+.right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+.right button{
+    padding: 10px  25px ;
+    background-color: rgba(102, 255, 0, 0.536);
+    color:black;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.right button:active{
+ background-color: khaki;
+}

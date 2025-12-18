@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.pagination{
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    justify-content: center;
+}
+
+.page button{
+    padding: 10px 15px;
+    outline: none;
+    transition: all 1s;
+    color: white;
+    background-color: black;
+}
+.page button:hover{
+    transform: scale(1.2,1.2);
+}

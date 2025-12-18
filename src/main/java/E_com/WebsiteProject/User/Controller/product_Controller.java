@@ -19,7 +19,7 @@ import E_com.WebsiteProject.User.entity.Product;
 
 
 @RestController
-@CrossOrigin("http://localhost:5174")
+@CrossOrigin("http://localhost:5173")
 public class product_Controller {
 	
 	@Autowired

@@ -1,4 +1,6 @@
 E_com\WebsiteProject\User\Repository\Delivery_repo.class
+E_com\WebsiteProject\User\config\CorsConfig$1.class
+E_com\WebsiteProject\User\config\CorsConfig.class
 E_com\WebsiteProject\User\Controller\Controller.class
 E_com\WebsiteProject\User\entity\Home.class
 E_com\WebsiteProject\User\entity\Cart.class

@@ -1,0 +1,634 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.displaycart{
+    min-height: 90vh;
+    min-width:99% ;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+.carts{
+
+     display: flex;
+     background-color: aliceblue;
+    justify-content: space-evenly;  
+    overflow: scroll;    
+}
+.addToCart{
+     overflow-y: auto;
+     max-height: calc(100vh - 140px);
+    width: 60%;
+    margin-top: 100px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0px 0px 3px 1px rgba(128, 128, 128, 0.37);
+    margin-left: 70px;
+   
+   
+
+}
+.placeorderbutton{
+     position: sticky;
+  
+  width: 100%;
+  height: 150px;
+  background-color: white;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 20px;
+ 
+  z-index: 10;
+}
+.place-order{
+   background-color: #fb641b; /* Flipkart orange */
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.lefts{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    
+}
+.cancel{
+   
+    
+    
+}
+.cancel_button{
+    position: absolute;
+left:880px;
+top: 150px;
+z-index: 50;
+font-size: 1.2rem;
+background-color: white;
+}
+.overflow::-webkit-scrollbar {
+  display: none;
+}
+
+.overflow{
+    height: 1000px;
+    width: 100% ;
+   overflow: scroll;
+}
+.border{
+    width: 90%;
+    height: 300px;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   box-shadow: 0px 0px 5px 1px grey;
+   
+    
+}
+
+
+.addcartimage{
+    width: 200px;
+    height:250px ;
+    
+    display: flex;
+    border-radius: 5px;
+    justify-content: center;    
+    align-items: center;
+    transition: all 1s;
+}
+.addcartimage :hover{
+     width: 200px;
+    height:250px ;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 1px;
+    
+    transform: scale(1.1,1.1);
+}
+.left_inside_right{
+    width: 50%;
+    display: flex;
+   flex-direction: column;
+   gap: 40px;
+   
+}
+.left_inside_right h2{
+    color: rgb(218, 34, 34);
+
+}
+.addcartimage img{
+    height:250px ;
+    width: 200px;
+}
+
+.rights{
+    margin-right: 100px;
+    height: 400px;
+    width: 350px;
+    margin-top: 100px;
+    background-color: white;
+     box-shadow: 0px 0px 3px 1px rgba(128, 128, 128, 0.37);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 15px;
+}
+.rights h3{
+    color: rgba(128, 128, 128, 0.771);
+    font-size: 1.2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.rights .pricedetails{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.pricecontent,.prices{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.prices  h4{
+    color: black;
+    text-decoration: none;   
+    font-size: 1.1rem;
+
+
+}
+.info:hover .hovertext{
+    visibility: visible;
+    opacity: 1;
+}
+.hovertext{
+
+  visibility: hidden;
+  width: 300px;
+  background-color:white;
+  text-align: left;
+  padding: 15px;
+  border-radius: 6px;
+  list-style: none;
+  position: absolute;
+  z-index: 50;
+  transform: translateX(-100%);
+  font-size: 13px;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: opacity 0.3s;
+  box-shadow: 0px 0px 3px 1px rgba(128, 128, 128, 0.371);
+} 
+.buymore{
+    display: flex;
+    justify-content: space-between;
+}
+.buymore li{
+    width: 200px;
+}
+.buymore p{
+    color: green;
+}
+.pricecontent h4{
+    display: flex;
+}
+.info{
+    position: relative;
+    display: inline-block;
+    top: 3px;
+    cursor: pointer;
+    
+}
+.rights .dotted-line{
+      /* border-top: 1px dashed #d0d0d0; */
+      border-bottom: 1px dashed rgba(128, 128, 128, 0.488);
+      margin: 18px 0px;
+   
+}
+.deliFee{
+    display: flex;
+    justify-content: space-between;
+}
+.deliFee p{
+    color: green;
+}
+.totalPriceItems{
+    display: flex;
+    justify-content: space-between;
+}
+.totalPriceItems li{
+    width: 200px;
+    font-size:0.9rem;
+}
+.totalPriceItems p{
+    color: green;
+    font-size:0.9rem;
+}
+.seven{
+    color: green;
+     list-style: none;
+    
+}
+.fivepercent li{
+    width: 200px;
+    font-size:0.9rem;
+}
+.sevenpercent li{
+    width: 200px;
+    font-size:0.9rem;
+
+}
+.sevenpercent{
+    display: flex;
+    justify-content: space-between;
+}
+.five{
+    color: green;
+    list-style: none;
+    font-size:0.9rem;
+}
+.fivepercent{
+    display: flex;
+    justify-content: space-between;
+}
+.rights .totalAmount h3{
+    color: black;
+}
+.hovertext p{
+    font-size:0.9rem;
+}
+.hovertext p span{
+    color: green;
+}
+.youSaved{
+    
+}
+.youSaved h3{
+    font-size: 1.2rem;
+   color: rgb(6, 184, 6);
+}
+
+.prices p{
+    color: rgb(13, 184, 13);
+}
+.totalAmount{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cartnav{
+    width: 100%;
+    position:relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    background-color:skyblue;
+    position: fixed;
+    z-index: 1000;
+    
+}
+.carts::-webkit-scrollbar{
+    display: none;
+}
+.leftnav input{
+    height: 40px;
+    width: 500px;
+    padding-left:  10px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 1px 0px;
+    border-radius: 1px;
+}
+.leftnav .cartNavSearch{
+    position: absolute;
+    left: 700px;
+   bottom: 10px;
+    font-size: 20px;
+    color: gray;
+    cursor: pointer;
+}
+.saveaddress{
+    height: 100px;
+    width: 100%;
+    border: 1px solid rgba(130, 130, 130, 0.401);
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between ;
+    padding: 0px 20px;
+}
+.saveaddress h5{
+    font-style:inherit;
+    
+}
+.saveaddress button{
+    padding: 7px;
+    color: rgb(27, 96, 235);
+    font-weight: 600;
+    background-color: aliceblue;
+     border: 1px solid rgba(130, 130, 130, 0.401);
+    outline: none;
+    cursor: pointer;
+    
+}
+.cancel{
+    height: 70px;
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+   
+}
+.cancel button{
+    font-style: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 5px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    
+}
+.text_details h3:hover{
+    color:  rgb(27, 96, 235);
+}
+.cancel .save:hover{
+    color:  rgb(27, 96, 235);
+
+}
+.cancel .remove:hover{
+    color: red;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.text h3:hover{
+    color:  rgb(27, 96, 235);;
+}
+.myAccount{
+    position: relative;
+    background-color:skyblue; 
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    gap: 5px;
+}
+.cartcontent{
+    position: relative;
+    display: flex;
+    bottom:3px;
+}
+.cart_Count{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cart_Count p{
+    
+    width: 18px;
+    height: 18px;
+    position: relative;
+    bottom:16px;
+    left: 20px;
+    background-color: rgb(232, 18, 18);
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+
+
+
+}
+.carticon{
+    position: relative;
+    top:3px ;
+}
+.dropDown{
+   
+    position: absolute;
+    top: 42px;
+    right: 0px;
+    width: 150px;
+    padding: 0px;
+    background-color: white;
+    box-shadow: 0px 0px 2px 1px rgba(128, 128, 128, 0.284);
+    border-radius: 5px;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%);
+}
+.dropDown li{
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    list-style: none;
+    cursor: pointer;
+}
+.dropDown {
+    visibility: visible;
+    opacity: 1;
+}
+.dropDown li:hover{
+    background-color: rgba(128, 128, 128, 0.244);
+    border-radius: 5px;
+    
+}
+
+.arrow svg{
+    position: absolute;
+    transition: transform 0.3 ease-in-out;
+}
+.arrow-open{
+    transform: rotate(180deg);
+}
+
+/* when dropdown is closed */
+.arrow-closed {
+  transform: rotate(0deg);
+}
+.dropDown .profile{
+    position: relative;
+top: 2px;
+color: blue;
+
+}
+
+.dropDown .orders{
+    position: relative;
+    top: 2px;
+    color: blue;
+}
+.contact{
+    position: relative;
+    top: 2px;
+    color: blue;
+}
+.logout{
+    position: relative;
+    top: 2px;
+    color: rgb(0, 25, 248);
+}
+
+.saveForLater{
+     width: 60%;
+    min-height: 1000px;
+   
+      box-shadow: 0px 0px 3px 1px rgba(128, 128, 128, 0.37);
+    margin-left: 100px;
+  
+    background-color: white;
+    border-radius: 10px;
+    
+}
+.saveitems{
+    width: 100%;
+    height: 100%;
+ 
+}
+ .heading{
+     height: 50px;
+    width: 100%;
+    border: 1px solid rgba(130, 130, 130, 0.401);
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between ;
+    padding: 0px 20px;
+    
+}
+.heading h3{
+
+}
+.saveitems .card_Save_Items{
+     width: 90%;
+    height: 300px;
+    margin-left: 50px;
+    margin-top: 50px;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   box-shadow: 0px 0px 5px 1px grey;
+
+}
+.card_Img{
+     width: 200px;
+    height:250px ;
+    
+    display: flex;
+    border-radius: 5px;
+    justify-content: center;    
+    align-items: center;
+    transition: all 1s;
+
+}
+.card_Img :hover{
+     box-shadow: 0px 0px 5px 1px grey;
+    transform: scale(1.1,1.1);
+}
+.card_Img img{
+
+    height:250px ;
+    width: 200px;
+}
+.card_img_detail{
+     width: 50%;
+    display: flex;
+   flex-direction: column;
+   gap: 40px;
+}
+.card_img_detail .text_details{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+  .text_details h2{
+    color:  rgb(218, 34, 34)
+ }
+.moveTocart_or_remove{
+
+       height: 70px;
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+ .moveTocart_or_remove button{
+
+      font-style: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 5px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+ }
+   .moveTocart_or_remove  .removed:hover{
+
+    color: red;
+
+ }
+ .moveTocart_or_remove  .Movetocart:hover{
+    color: rgb(27, 96, 235);
+ }
+
+
+ /*SHow Delivery_address*/
+.enter-pincode{
+    
+    min-height:300px ;
+    width:300px;
+    background-color: white;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    visibility: visible;
+    border-radius: 5px;
+    left: 600px;
+    top: 150px;
+    box-shadow: 0px 0px 2px 1px rgba(128, 128, 128, 0.533);
+
+}
+
+.address-form input,textarea{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.6);
+}
+.address-form input,button{
+    padding:10px 10px 10px 5px;
+}
+.address-form{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+}

@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.Signup{
+     height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+.formsignup{
+
+    border:1px solid black;
+    height: 550px;
+    width: 350px;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(127, 255, 212, 0.532);
+    box-shadow: 0px 0px 5px 2px ;
+}
+.formsignup h1{
+    margin-bottom: 40px;
+}
+.formsignup form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+.formsignup form input{
+     padding: 8px 70px  8px 5px;
+    outline: none;
+    cursor: pointer;
+}
+.formsignup form .gender{
+    
+    display: flex;
+    gap: 15px;
+}
+.formsignup form button{
+    padding: 7px 15px;
+    background-color: rgba(127, 255, 212, 0.532);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.formsignup form span{
+    cursor: pointer;
+}
+.formsignup form .password{
+       position: relative;
+    width: 100%;
+}
+.formsignup form .eye{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #555;
+    
+}
+.formsignup form .resetPassword{
+    position: relative;
+    width: 100%;
+}

@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main_Content{
+    
+    background-color: rgba(0, 255, 255, 0.267);
+}
+.welcome{
+  
+    background-image: url(https://c8.alamy.com/comp/2F5NTX6/online-shopping-seamless-web-banner-hand-drawn-e-commerce-objects-on-gray-background-vector-illustration-2F5NTX6.jpg);
+    background-color: aliceblue;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.welcome h1{
+    background:linear-gradient(black);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.home_Products{
+    margin-top: 50px;
+    min-height: 1000px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    flex-wrap: wrap;
+
+}
+.attraction{
+    height: 250px;
+    width: 200px;
+    transition: all 1s;
+}
+
+.attraction:hover{
+    transform: scale(1.1,1.1);
+    background-color: transparent;
+}
+
+.imagehome{
+
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+     
+
+}
+.home_Div_Products{
+    height: 400px;
+    width:350px;
+    background-color: white;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+   
+  
+
+}
+.price_discount{
+    display: flex;
+    justify-content: space-around;
+    
+}
+.price{
+    text-decoration:line-through 1px solid;
+    color: rgba(0, 0, 0, 0.484);
+}
+.home_Div_Products .name{
+    text-align: center;
+    color: rgb(42, 188, 246);
+}

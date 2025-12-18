@@ -1,33 +1,45 @@
+version: "3.8"
+
 services:
-  mysql-db:
+  # MySQL Database
+  mysql:
     image: mysql:8.0
-    container_name: user-mysql-db
-    restart: always
+    container_name: mysql-db
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: e_commerce
+      MYSQL_DATABASE: ecommerce
     ports:
-      - "3307:3306"
+      - "3307:3306"   # Host port 3307 maps to container 3306
     volumes:
-      - mysql-data:/var/lib/mysql
+      - mysql_data:/var/lib/mysql
     healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-proot"]
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
       interval: 10s
       timeout: 5s
       retries: 5
 
-  user-app:
-    image: user-user-app:latest
-    container_name: user-app
-    depends_on:
-      mysql-db:
-        condition: service_healthy
+  # Spring Boot backend
+  springboot-app:
+    build: .   # path to your Spring Boot Dockerfile
+    container_name: springboot-app
     ports:
-      - "8080:8080"
+      - "8081:8080"   # Host 8081 maps to container 8080
+    depends_on:
+      mysql:
+        condition: service_healthy
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://mysql-db:3306/e_commerce?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/ecommerce?useSSL=false&allowPublicKeyRetrieval=true
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: root
 
+  frontend:
+    build:
+      context: ./frontend   # path to React project
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+    depends_on:
+      - springboot-app
+
 volumes:
-  mysql-data:
+  mysql_data:
