@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="af2d7fe0-f927-47aa-adf1-e7c7a38c7004" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/E_com/WebsiteProject/User/Controller/Cart_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/java/E_com/WebsiteProject/User/Controller/Cart_Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/E_com/WebsiteProject/User/Controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/java/E_com/WebsiteProject/User/Controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/E_com/WebsiteProject/User/Controller/Home_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/java/E_com/WebsiteProject/User/Controller/Home_Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/E_com/WebsiteProject/User/Controller/Savecart_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/java/E_com/WebsiteProject/User/Controller/Savecart_Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/E_com/WebsiteProject/User/Controller/product_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/java/E_com/WebsiteProject/User/Controller/product_Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/E_com/WebsiteProject/User/Controller/Cart_Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/../target/classes/E_com/WebsiteProject/User/Controller/Cart_Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/E_com/WebsiteProject/User/Controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/../target/classes/E_com/WebsiteProject/User/Controller/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/E_com/WebsiteProject/User/Controller/Home_Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/../target/classes/E_com/WebsiteProject/User/Controller/Home_Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/E_com/WebsiteProject/User/Controller/Savecart_Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/../target/classes/E_com/WebsiteProject/User/Controller/Savecart_Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/E_com/WebsiteProject/User/Controller/product_Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/../target/classes/E_com/WebsiteProject/User/Controller/product_Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/E_com/WebsiteProject/User/Service/Savecart_Service.class" beforeDir="false" afterPath="$PROJECT_DIR$/../target/classes/E_com/WebsiteProject/User/Service/Savecart_Service.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/E_com/WebsiteProject/User/entity/Cart.class" beforeDir="false" afterPath="$PROJECT_DIR$/../target/classes/E_com/WebsiteProject/User/entity/Cart.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/E_com/WebsiteProject/User/entity/DeliveryAddress.class" beforeDir="false" afterPath="$PROJECT_DIR$/../target/classes/E_com/WebsiteProject/User/entity/DeliveryAddress.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/E_com/WebsiteProject/User/entity/Home.class" beforeDir="false" afterPath="$PROJECT_DIR$/../target/classes/E_com/WebsiteProject/User/entity/Home.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/E_com/WebsiteProject/User/entity/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/../target/classes/E_com/WebsiteProject/User/entity/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/E_com/WebsiteProject/User/entity/Save_cart.class" beforeDir="false" afterPath="$PROJECT_DIR$/../target/classes/E_com/WebsiteProject/User/entity/Save_cart.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/E_com/WebsiteProject/User/entity/Signup.class" beforeDir="false" afterPath="$PROJECT_DIR$/../target/classes/E_com/WebsiteProject/User/entity/Signup.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../target/classes/application.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="370ygS0ZOJeZOIxoyf44VGHQap6" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/USER/Downloads/User(1)/User/src",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-cffe25b9f5b3-intellij.indexing.shared.core-IU-253.28294.334" />
+        <option value="bundled-js-predefined-d6986cc7102b-c7e53b3be11b-JavaScript-IU-253.28294.334" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="af2d7fe0-f927-47aa-adf1-e7c7a38c7004" name="Changes" comment="" />
+      <created>1766054393277</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1766054393277</updated>
+      <workItem from="1766054394588" duration="27000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
