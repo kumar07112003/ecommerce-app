@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import E_com.WebsiteProject.User.Service.Home_Service;
 import E_com.WebsiteProject.User.entity.Home;
 @RestController
-@CrossOrigin("http://localhost:5173")
+@CrossOrigin("http://localhost:3000")
 public class Home_Controller {
 
 	@Autowired

@@ -17,7 +17,7 @@ import E_com.WebsiteProject.User.Service.Savecart_Service;
 import E_com.WebsiteProject.User.entity.Save_cart;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "http://localhost:3000")
 public class Savecart_Controller {
 
 	@Autowired

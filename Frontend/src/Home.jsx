@@ -3,7 +3,7 @@ import { CiSearch } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import "./Home.css";
 import { FaCartShopping } from "react-icons/fa6";
-import Pagination from "./pagination";
+import Pagination from "./Pagination";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import API_BASE_URL from "../api";

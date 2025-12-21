@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import E_com.WebsiteProject.User.Repository.sign_Repo;
 import E_com.WebsiteProject.User.entity.Signup;
 
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 public class Controller {
 	
