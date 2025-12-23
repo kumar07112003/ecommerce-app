@@ -1,23 +1,21 @@
 import React, { useEffect, useState } from "react";
-import { CiSearch } from "react-icons/ci";
-import { Link } from "react-router-dom";
 import "./Home.css";
-import { FaCartShopping } from "react-icons/fa6";
 import Pagination from "./Pagination";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import API_BASE_URL from "../api";
+import Nav from "./Nav";
+import Footer from "./Footer";
 const Home = () => {
-  let [search, setSearch] = useState("");
+  
   let [products, setProducts] = useState([]);
-  let [searchActive, setSearchActive] = useState(false);
+  let [search, setSearch] = useState("");
   let [currentPage, setCurrentPage] = useState(1);
+ 
   let [postPerPage, setPostPerPage] = useState(12);
   let [cartCount,setCartCount]=useState(0);
   let navigate = useNavigate();
-  function handleSearch(e) {
-    setSearch(e.target.value);
-  }
+ 
   
 
   useEffect(() => {
@@ -32,56 +30,31 @@ const Home = () => {
     }
     abc();
 
-    async function cartCounting()
-    {
-     try{
-       let res= await fetch(`${API_BASE_URL}/findAllCart`);
-      let data= await res.json();
-      setCartCount(data.length);
-     }
-     catch(err){
-      console.log(err)
-     }
-    }
-    cartCounting();
+     async function cartCounting()
+            {
+             try{
+               let res= await fetch(`${API_BASE_URL}/findAllCart`);
+              let data= await res.json();
+              setCartCount(data.length);
+             }
+             catch(err){
+              console.log(err)
+             }
+            }
+            cartCounting();
+
+    
   }, []);
-  // let filtered=products.filter(p=>{
-  //   p.name.toLowerCase().includes(search.toLowerCase())
-  // })
+
   let lastPostIndex = currentPage * postPerPage;
   let firstPostIndex = lastPostIndex - postPerPage;
   let currentpost = products.slice(firstPostIndex, lastPostIndex);
   return (
     <div className="Home">
-      <nav>
-        <div className="logo">Logo</div>
-         <div className="centre">
-          <Link to="/home">Home</Link>
-          <Link to="/products">Product</Link>
-          <Link to="/category">Category</Link>
-          <a className="cartcontent" onClick={()=>{
-            navigate("/addToCart")
-          }}>
-            <div className="cart_Count">
-              <p>{cartCount}</p>
-              <span className="carticon"><FaCartShopping /></span></div> Cart</a>
-        </div>
-        
-        <div className="search">
-          <input
-            type="text"
-            name="search"
-            onClick={() => setSearchActive(!searchActive)}
-            placeholder={!search ? "Search" : " "}
-            value={search}
-            onChange={handleSearch}
-          />
-          <div className="search_icon">
-            <CiSearch />
-          </div>
-        </div>
-      </nav>
-
+      <Nav search={search}
+        setSearch={setSearch}
+        cartCount={cartCount}
+      ></Nav>
       <div className="products">
         {currentpost
           .filter((products) => {
@@ -93,7 +66,7 @@ const Home = () => {
           .map((products) => {
             return (
               <div className="product" key={products.id}>
-                <img src={products.imageUrl} alt={products.name} />
+               <div className="pimg"> <img src={products.imageUrl} alt={products.name} /></div>
                 <h3>{products.name}</h3>
                 <h4>{products.description.slice(0,40)}...</h4>
                 <div className="rate_price">
@@ -125,8 +98,9 @@ const Home = () => {
           item.name.toLowerCase().includes(search.toLowerCase())
         ).length === 0 &&
           search.trim() !== "" && (
-            <h1 style={{ textAlign: "center", width: "100%" }}>
-              Data Not Found
+            <h1 style={{height:"100vh", display:"flex",
+            alignItems:"center", justifyContent:"center", width: "100vw" }}>
+              Something Went Wrong
             </h1>
           )}
         <Pagination
@@ -136,6 +110,7 @@ const Home = () => {
           currentPage={currentPage}
         ></Pagination>
       </div>
+      <Footer></Footer>
     </div>
   );
 };

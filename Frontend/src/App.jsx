@@ -11,6 +11,8 @@ import AddToCart from "./AddToCart";
 import Ecommercre_main from "./Ecommercre_main";
 import { ToastContainer } from "react-toastify";
 import Profile from "./MyAccount/Profile";
+import Nav from "./Nav";
+import Footer from "./Footer";
 
 const App = () => {
   return (
@@ -19,6 +21,7 @@ const App = () => {
 
         <ToastContainer position="bottom-center" autoClose={1000} ></ToastContainer>
         <Routes>
+          <Route path="/Nav" element={<Nav></Nav>} ></Route>
           <Route path="/" element={<Ecommerce></Ecommerce>}>
             <Route path="login" element={<Login></Login>}></Route>
             <Route path="signup" element={<Signup></Signup>}></Route>
@@ -36,7 +39,7 @@ const App = () => {
           
           </Route>
           <Route path="/profile" element={<Profile></Profile>}></Route>
-          <Route ></Route>
+          <Route path="/footer" element={<Footer></Footer>}></Route>
           <Route></Route>
           <Route></Route>
         </Routes>
