@@ -4,8 +4,13 @@ import Nav from "./Nav";
 import "./Home";
 import API_BASE_URL from "../api";
 import Footer from "./Footer";
+import { Outlet } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 const Products = ({ search, setSearch, cartCount }) => {
   let [Product, setAllProducts] = useState([]);
+
+  let navigate = useNavigate();
 
   useEffect(() => {
     async function allProducts() {
@@ -30,7 +35,15 @@ const Products = ({ search, setSearch, cartCount }) => {
         <div className="allcategory">
           {Product.map((Product) => {
             return (
-              <div className="category" key={Product.apid}>
+              <div
+                className="category"
+                key={Product.apid}
+                onClick={() => {
+                  if (Product.category.toLowerCase() === "mobile phones") {
+                    navigate("/phone");
+                  }
+                }}
+              >
                 <img src={Product.imageUrl} alt={Product.category} />
                 <p>{Product.category}</p>
                 <h4>From ₹{Product.price}</h4>
@@ -38,6 +51,7 @@ const Products = ({ search, setSearch, cartCount }) => {
             );
           })}
         </div>
+       
         <div className="paragraph">
           <div className="top-stories">
             <h1>Top Stories: Brand Directory</h1>
@@ -105,10 +119,10 @@ const Products = ({ search, setSearch, cartCount }) => {
           </div>
           <div className="why-you-choose">
             <h1>Why you want Choose Distock?</h1>
-            
-              <ul>
-               <p>
-                 <li>
+
+            <ul>
+              <p>
+                <li>
                   Wide range of products across electronics, fashion, home, and
                   daily essentials
                 </li>
@@ -127,14 +141,14 @@ const Products = ({ search, setSearch, cartCount }) => {
                 <li>Trusted sellers and quality assurance</li>
                 <li>Responsive customer support</li>
                 <li>Convenient shopping anytime, anywhere</li>
-               </p>
-              </ul>
-            
+              </p>
+            </ul>
           </div>
         </div>
         <Footer></Footer>
+        
       </div>
-      
+       
     </div>
   );
 };

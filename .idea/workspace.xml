@@ -5,17 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="720b83d5-cdd3-4038-8772-4b7787c6d6b7" name="Changes" comment="Initial commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/E_com/WebsiteProject/User/Controller/Allproducts_Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/E_com/WebsiteProject/User/Repository/Allproducts_repo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/E_com/WebsiteProject/User/Service/Allproducts_Service.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/E_com/WebsiteProject/User/entity/AllProducts.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/E_com/WebsiteProject/User/Controller/Phone_Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/E_com/WebsiteProject/User/Repository/phone_repo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/E_com/WebsiteProject/User/Service/Phone_service.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/E_com/WebsiteProject/User/entity/Phone.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/AddToCart.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/AddToCart.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/AddToCart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/AddToCart.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/Home.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/Home.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/Home.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/Login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/MyAccount/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/MyAccount/Profile.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/Products.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/Products.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -136,7 +134,8 @@
       <workItem from="1766078857839" duration="3950000" />
       <workItem from="1766122019268" duration="4160000" />
       <workItem from="1766314237457" duration="8180000" />
-      <workItem from="1766382324773" duration="6269000" />
+      <workItem from="1766382324773" duration="14771000" />
+      <workItem from="1766560295389" duration="641000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />

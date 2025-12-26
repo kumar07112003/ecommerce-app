@@ -7,16 +7,14 @@ import API_BASE_URL from "../api";
 import Nav from "./Nav";
 import Footer from "./Footer";
 const Home = () => {
-  
   let [products, setProducts] = useState([]);
   let [search, setSearch] = useState("");
   let [currentPage, setCurrentPage] = useState(1);
- 
+
   let [postPerPage, setPostPerPage] = useState(12);
-  let [cartCount,setCartCount]=useState(0);
+  let [cartCount, setCartCount] = useState(0);
+  let [description, setDescription] = useState(false);
   let navigate = useNavigate();
- 
-  
 
   useEffect(() => {
     async function abc() {
@@ -30,20 +28,16 @@ const Home = () => {
     }
     abc();
 
-     async function cartCounting()
-            {
-             try{
-               let res= await fetch(`${API_BASE_URL}/findAllCart`);
-              let data= await res.json();
-              setCartCount(data.length);
-             }
-             catch(err){
-              console.log(err)
-             }
-            }
-            cartCounting();
-
-    
+    async function cartCounting() {
+      try {
+        let res = await fetch(`${API_BASE_URL}/findAllCart`);
+        let data = await res.json();
+        setCartCount(data.length);
+      } catch (err) {
+        console.log(err);
+      }
+    }
+    cartCounting();
   }, []);
 
   let lastPostIndex = currentPage * postPerPage;
@@ -51,10 +45,7 @@ const Home = () => {
   let currentpost = products.slice(firstPostIndex, lastPostIndex);
   return (
     <div className="Home">
-      <Nav search={search}
-        setSearch={setSearch}
-        cartCount={cartCount}
-      ></Nav>
+      <Nav search={search} setSearch={setSearch} cartCount={cartCount}></Nav>
       <div className="products">
         {currentpost
           .filter((products) => {
@@ -66,13 +57,22 @@ const Home = () => {
           .map((products) => {
             return (
               <div className="product" key={products.id}>
-               <div className="pimg"> <img src={products.imageUrl} alt={products.name} /></div>
+                <div className="pimg">
+                  {" "}
+                  <img src={products.imageUrl} alt={products.name} />
+                </div>
                 <h3>{products.name}</h3>
-                <h4>{products.description.slice(0,40)}...</h4>
+                <h4 className="description">
+                  {products.description.slice(0, 40)}...
+                  <span className="full-description">
+                    {products.description}
+                  </span>
+                </h4>
                 <div className="rate_price">
                   <h5>Price:{products.price}$</h5>
                   <h5>{products.rating}</h5>
                 </div>
+                {}
                 <h4>Quantity:{products.stock}</h4>
                 <button
                   className="addcart"
@@ -82,7 +82,6 @@ const Home = () => {
                       headers: { "content-type": "application/json" },
                       body: JSON.stringify({
                         productId: products.id,
-                        
                       }),
                     });
                     toast.success("Product Added to Cart Successfully");
@@ -98,8 +97,15 @@ const Home = () => {
           item.name.toLowerCase().includes(search.toLowerCase())
         ).length === 0 &&
           search.trim() !== "" && (
-            <h1 style={{height:"100vh", display:"flex",
-            alignItems:"center", justifyContent:"center", width: "100vw" }}>
+            <h1
+              style={{
+                height: "100vh",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                width: "100vw",
+              }}
+            >
               Something Went Wrong
             </h1>
           )}

@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.phone {
+  height: 100%;
+  min-width: 100%;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}
+.pcontainer {
+  min-height: 100px;
+  width: 80%;
+  position: relative;
+  top: 150px;
+  background-color: white;
+  padding-top: 100px;
+  border-radius: 10px;
+}
+.phone-container {
+  display: flex;
+
+  
+  gap: 10px;
+}
+.phonedetails {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 90%;
+  height: 300px;
+  background-color: whitesmoke;
+  box-shadow: 0px 0px 5px 2px rgba(128, 128, 128, 0.249);
+}
+.addcart-buynow{
+  display: flex;
+ 
+  gap: 20px;
+}
+
+.phone-img img {
+  height: 200px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.addcart-buynow button{
+  padding: 10px 20px;
+
+  background-image: radial-gradient(rgb(248, 67, 1),rgb(225, 128, 2));
+  border: none;
+  color: white;
+}
+.phone-img{
+ height: 250px;
+  width: 300px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+ 
+}
+.cartbutton{
+  position: relative;
+top: 2px;
+right: 2px;
+}
+.thunder{
+  position: relative;
+  top: 2px;
+}
+.phone-img-rating {
+  height: 250px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  
+  flex-wrap: wrap;
+
+}
+.ratingbutton .sponsored p{
+  font-size: 1.2em;
+  color: grey;
+  padding-right: 10px;
+}
+.phone-img-rating{
+     padding: 0px 10px;
+     display: flex;
+     gap: 20px;
+}
+.phone-img-rating p{
+   
+    font-size:1.5rem
+}
+.phone-container:hover{
+    color: blue;
+}
+.img-content ul {
+    padding: 0px 20px;
+}
+.img-content ul li::marker {
+    color: rgba(128, 128, 128, 0.758);
+    
+}
+
+.ratingbutton button{
+    color: white;
+    font-weight: 600;
+    background-color: rgba(21, 162, 21, 0.885);
+    outline: none;
+    border: none;
+    padding: 5px 10px;
+}
+.yellow{
+    position: relative;
+    top: 2px;
+    left: 1px;
+ color: white;
+}
+.img-content ul p li{
+     
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.995);
+}
+.phone-price-offers{
+   height: 300px;
+   width: 500px;
+   background-color: white;
+}

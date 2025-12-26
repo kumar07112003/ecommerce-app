@@ -47,6 +47,27 @@
  
   z-index: 10;
 }
+.description{
+    position: relative;
+    cursor: pointer;
+}
+.full-description{
+    position: absolute;
+    opacity: 0;
+    visibility:hidden;
+    transform: translate(-100%);
+    top: 125px;
+    border-radius: 2px;
+    background-color: white;
+    text-align: center;
+     z-index:1;
+    min-width: 200px;
+    min-height: 20px;
+}
+.description:hover .full-description{
+      visibility: visible;
+      opacity: 1;
+}
 .place-order{
    background-color: #fb641b; /* Flipkart orange */
   color: white;

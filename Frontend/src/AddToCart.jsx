@@ -1,28 +1,23 @@
 import React, { useEffect, useState } from "react";
-import { FaSearch } from "react-icons/fa";
-import { IoMdContact } from "react-icons/io";
-import { AiOutlineDeliveredProcedure } from "react-icons/ai";
-import { IoNotifications } from "react-icons/io5";
-import { IoLogOutSharp } from "react-icons/io5";
-import { MdOutlineArrowDropDown } from "react-icons/md";
+
 import { IoIosInformationCircleOutline } from "react-icons/io";
 import "./AddToCart.css";
 import { MdCancelPresentation } from "react-icons/md";
 import API_BASE_URL from "../api";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import WholeNav from "./WholeNav";
+
+
 
 const AddToCart = () => {
-  let [cart, setCart] = useState([]);
-  let [dropDown, setdropDown] = useState(false);
+   let [cart, setCart] = useState([]);
+  
   let [saveCart, setSaveCart] = useState([]);
   let [showPopupPincode, setShowPopupPincode] = useState(false);
 
   let navigate = useNavigate();
-  function handleMyAccount(e) {
-    e.stopPropagation();
-    setdropDown(!dropDown);
-  }
+  
   useEffect(() => {
     async function fetchCart() {
       let res = await fetch(`${API_BASE_URL}/findAllCart`);
@@ -121,83 +116,12 @@ const AddToCart = () => {
     console.log(datas);
     setSaveCart([...saveCart, datas]);
   }
-  let [searchCart, setSearchcart] = useState("");
-  let [searchcartActive, setSearchcartActive] = useState(false);
-  function handleSearchCart(e) {
-    setSearchcart(e.target.value);
-  }
-  {
-    cart.filter((products) => {
-      if (searchCart === " ") return true;
-      else {
-        return products.name.toLowerCase().includes(searchCart.toLowerCase());
-      }
-    });
-  }
+  
+ 
 
   return (
     <div className="displaycart">
-      <div className="cartnav">
-        <div className="leftnav">
-          <input
-            type="text"
-            placeholder={!searchCart ? "Search for products and more" : " "}
-            onClick={() => {
-              setSearchcartActive(!searchcartActive);
-            }}
-            name="serachcart"
-            value={searchCart}
-            onChange={handleSearchCart}
-          />
-          <div className="cartNavSearch">
-            <FaSearch />
-          </div>
-        </div>
-        <div className="rightnav">
-          <div className="myAccount" onClick={handleMyAccount}>
-            {" "}
-            My Account
-            <span className="arrow">
-              <MdOutlineArrowDropDown
-                className={dropDown ? "arrow-closed" : "arrow-open"}
-              />
-            </span>
-          </div>
-          {dropDown && (
-            <div className="dropDown" onClick={(e) => e.stopPropagation()}>
-              <li
-                onClick={(e) => {
-                  e.stopPropagation();
-                  navigate("/profile");
-                }}
-              >
-                <div className="profile">
-                  <IoMdContact />
-                </div>
-                Profile
-              </li>
-              <li>
-                <div className="orders">
-                  <AiOutlineDeliveredProcedure />
-                </div>
-                Orders
-              </li>
-              <li>
-                <div className="contact">
-                  <IoNotifications />
-                </div>
-                Notification
-              </li>
-              <li>
-                <div className="logout">
-                  <IoLogOutSharp />
-                </div>
-                Logout
-              </li>
-            </div>
-          )}
-        </div>
-      </div>
+      <WholeNav cart={cart}></WholeNav>
       {/* //!Cart Items Display */}
       <div className="carts">
         <div className="addToCart">
