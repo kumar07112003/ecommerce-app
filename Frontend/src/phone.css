@@ -4,37 +4,88 @@
   box-sizing: border-box;
 }
 .phone {
-  height: 100%;
+  position: absolute;
+  min-height: 100vh;
   min-width: 100%;
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
 }
 .pcontainer {
-  min-height: 100px;
-  width: 80%;
-  position: relative;
-  top: 150px;
+  min-height: 1000px;
+  width: 90%;
+  /* position: absolute; */
+   margin-top: 150px;
+  gap: 10px;
   background-color: white;
+  margin-bottom: 10px;
   padding-top: 100px;
   border-radius: 10px;
 }
 .phone-container {
   display: flex;
 
-  
   gap: 10px;
+}
+.phone-price-offers{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 40px;
+
+}
+.original-price {
+  text-decoration: line-through;
+  color: #878787;
+  font-size: 1rem;
+}
+
+.discounted-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #212121;
+}
+.original-price {
+  position: relative;
+  top: 2px;
+}
+.price-offer{
+  display: flex;
+  gap: 10px;
+}
+
+.discount-percent {
+  color: #388e3c;
+  font-weight: 600;
+}
+.disprice{
+  display: flex;
+  
+}
+.assured{
+  padding-left: 100px;
+  color: rgb(24, 24, 246);
+}
+
+.superdeal{
+   color: #388e3c;
+    font-weight: 600;
+}
+.totaldis{
+  color: black;
+  font-size: 1rem;
 }
 .phonedetails {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   width: 90%;
-  height: 300px;
+  min-height: 300px;
   background-color: whitesmoke;
+  border-radius: 10px;
   box-shadow: 0px 0px 5px 2px rgba(128, 128, 128, 0.249);
 }
-.addcart-buynow{
+.addcart-buynow {
   display: flex;
- 
+
   gap: 20px;
 }
 
@@ -45,29 +96,28 @@
   align-items: center;
   justify-content: center;
 }
-.addcart-buynow button{
+.addcart-buynow button {
   padding: 10px 20px;
 
-  background-image: radial-gradient(rgb(248, 67, 1),rgb(225, 128, 2));
+  background-image: radial-gradient(rgb(248, 67, 1), rgb(225, 128, 2));
   border: none;
   color: white;
 }
-.phone-img{
- height: 250px;
+.phone-img {
+  height: 250px;
   width: 300px;
   display: flex;
   gap: 10px;
   align-items: center;
   justify-content: center;
   flex-direction: column;
- 
 }
-.cartbutton{
+.cartbutton {
   position: relative;
-top: 2px;
-right: 2px;
+  top: 2px;
+  right: 2px;
 }
-.thunder{
+.thunder {
   position: relative;
   top: 2px;
 }
@@ -76,56 +126,53 @@ right: 2px;
   width: 500px;
   display: flex;
   flex-direction: column;
-  
-  flex-wrap: wrap;
 
+  flex-wrap: wrap;
 }
-.ratingbutton .sponsored p{
+.ratingbutton .sponsored p {
   font-size: 1.2em;
   color: grey;
   padding-right: 10px;
 }
-.phone-img-rating{
-     padding: 0px 10px;
-     display: flex;
-     gap: 20px;
+.phone-img-rating {
+  padding: 0px 10px;
+  display: flex;
+  gap: 20px;
 }
-.phone-img-rating p{
-   
-    font-size:1.5rem
+.phone-img-rating p {
+  font-size: 1.5rem;
 }
-.phone-container:hover{
-    color: blue;
+.phone-container:hover {
+  color: blue;
 }
 .img-content ul {
-    padding: 0px 20px;
+  padding: 0px 20px;
 }
 .img-content ul li::marker {
-    color: rgba(128, 128, 128, 0.758);
-    
+  color: rgba(128, 128, 128, 0.758);
 }
 
-.ratingbutton button{
-    color: white;
-    font-weight: 600;
-    background-color: rgba(21, 162, 21, 0.885);
-    outline: none;
-    border: none;
-    padding: 5px 10px;
+.ratingbutton button {
+  color: white;
+  font-weight: 600;
+  background-color: rgba(21, 162, 21, 0.885);
+  outline: none;
+  border: none;
+  padding: 5px 10px;
 }
-.yellow{
-    position: relative;
-    top: 2px;
-    left: 1px;
- color: white;
+.yellow {
+  position: relative;
+  top: 2px;
+  left: 1px;
+  color: white;
 }
-.img-content ul p li{
-     
-    font-size: 1.2rem;
-    color: rgba(0, 0, 0, 0.995);
+.img-content ul p li {
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.995);
 }
-.phone-price-offers{
-   height: 300px;
-   width: 500px;
-   background-color: white;
+.phone-price-offers {
+  height: 300px;
+  width: 500px;
+  background-color: white;
+  box-shadow: 0px 0px 5px 2px rgba(128, 128, 128, 0.249);
 }

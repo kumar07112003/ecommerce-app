@@ -19,10 +19,7 @@ const Nav = ({ search, setSearch, cartCount }) => {
           <Link to="/home">Home</Link>
           <Link to="/products">Product</Link>
           <Link to="/category">Category</Link>
-          <Link
-            className="cartcontent"
-            to="/addToCart"
-          >
+          <Link className="cartcontent" to="/addToCart">
             <div className="cart_Count">
               <p>{cartCount}</p>
               <span className="carticon">

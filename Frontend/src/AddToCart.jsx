@@ -56,7 +56,7 @@ const AddToCart = () => {
   let saveAmount =
     Number(disCount) + Number(buyMore_saveMore) + Number(couponsForYou);
   console.log(saveAmount);
-  let totalDeliveryFee =
+    let totalDeliveryFee =
     delivery_Fee +
     protected_Fee -
     disCount +
@@ -210,9 +210,9 @@ const AddToCart = () => {
               className="place-order"
               disabled={cart.length === 0}
               onClick={() => {
-                navigate("");
+                navigate("/order",{state:{cart,totalDeliveryFee}});
               }}
-            >
+            >c
               Place order
             </button>
           </div>

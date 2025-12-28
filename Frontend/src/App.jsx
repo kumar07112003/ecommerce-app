@@ -14,6 +14,7 @@ import Profile from "./MyAccount/Profile";
 import Nav from "./Nav";
 import Footer from "./Footer";
 import Phone from "./Phone";
+import Order from "./Order";
 import WholeNav from "./WholeNav";
 const App = () => {
   return (
@@ -48,6 +49,7 @@ const App = () => {
           <Route path="/footer" element={<Footer></Footer>}></Route>
 
           <Route path="/wholenav" element={<WholeNav></WholeNav>}></Route>
+          <Route path="/order" element={<Order></Order>}></Route>
         </Routes>
       </Router>
     </div>
