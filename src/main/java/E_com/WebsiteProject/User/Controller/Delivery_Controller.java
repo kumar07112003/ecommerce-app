@@ -1,15 +1,12 @@
 package E_com.WebsiteProject.User.Controller;
 
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import E_com.WebsiteProject.User.Service.Delivery_Service;
 import E_com.WebsiteProject.User.entity.DeliveryAddress;
 
 @RestController
+@CrossOrigin("http://localhost:3000")
 public class Delivery_Controller {
 
 	private Delivery_Service delivery_Service;

@@ -1,31 +1,72 @@
-import React from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Order.css";
+import API_BASE_URL from "../api";
 
 const Order = () => {
+  const [order, setOrder] = useState([]);
+  const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
-  const { state } = useLocation();
+  let[address,setAddressFormData]=useState([]);
 
-  // Get cart data safely (NO context)
-  const cart = state?.cart || [];
+  // Fetch cart data
+  useEffect(() => {
+    async function getAddress() {
+      try{
+        const res = await fetch(`${API_BASE_URL}/getAddress`);
+        const data = await res.json();
+        setAddressFormData(data);
+      }catch(error){
+        console.error("Error fetching address:", error);
+      }finally{ 
+        // Handle address data if needed
+      }
+      
+    }
+    async function fetchOrderData() {
+      try {
+        const res = await fetch(`${API_BASE_URL}/findAllCart`);
+        const data = await res.json();
 
-  // Calculate total price
-  const totalPrice = cart.reduce(
-    (sum, item) => sum + Number(item.price),
-    0
-  );
+        // If backend returns { data: [...] }
+        const cartItems = Array.isArray(data) ? data : data.data;
 
-  // If user refreshes page or cart is empty
-  if (cart.length === 0) {
+        setOrder(cartItems || []);
+      } catch (error) {
+        console.error("Error fetching cart:", error);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchOrderData();
+    getAddress();
+  }, []);
+
+  // Loading state
+  if (loading) {
     return (
-      <div className="empty-order">
-        <h2>Your cart is empty</h2>
-        <button onClick={() => navigate("/cart")}>
-          Go Back to Cart
-        </button>
+      <div className="order-page">
+        <h2>Loading your cart...</h2>
       </div>
     );
   }
+
+  // Empty cart
+  if (order.length === 0) {
+    return (
+      <div className="empty-order">
+        <h2>Your cart is empty</h2>
+        <button onClick={() => navigate("/")}>Shop Now</button>
+      </div>
+    );
+  }
+
+  // Calculate total price
+  const totalPrice = order.reduce(
+    (sum, item) => sum + Number(item.price) * (item.quantity || 1),
+    0
+  );
 
   return (
     <div className="order-page">
@@ -34,22 +75,30 @@ const Order = () => {
       {/* Address Section */}
       <div className="order-address">
         <h3>Delivery Address</h3>
-        <p>
-          Muthu Kumar <br />
-          Tirunelveli, Tamil Nadu <br />
-          627001
-        </p>
+        <div className="addresssave">
+          {address.map((p)=>{
+            return(
+            <div key={p.id}>
+                <p>{p.name}</p>
+                <p>{p.address} {p.pincode}</p>  
+            </div>
+          )})}
+          
+        </div>
       </div>
 
       {/* Cart Items */}
       <div className="order-items">
-        {cart.map((item) => (
-          <div className="order-item" key={item.id}>
+        {order.map((item) => (
+          <div className="order-item" key={item.id || item.pid}>
             <img src={item.imageUrl} alt={item.name} />
+
             <div className="item-details">
               <h4>{item.name}</h4>
-              <p>{item.description}</p>
-              <p className="price">₹{item.price}</p>
+              <p>Quantity: {item.quantity || 1}</p>
+              <p className="price">
+                {Number(item.price) * (item.quantity || 1)}$
+              </p>
             </div>
           </div>
         ))}
@@ -58,8 +107,8 @@ const Order = () => {
       {/* Price Details */}
       <div className="order-price">
         <h3>Price Details</h3>
-        <p>Total Items: {cart.length}</p>
-        <p>Total Price: ₹{totalPrice}</p>
+        <p>Total Items: {order.length}</p>
+        <p>Total Price: ₹{(totalPrice).toFixed()}$</p>
       </div>
 
       {/* Confirm Order */}

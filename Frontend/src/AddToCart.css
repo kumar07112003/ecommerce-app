@@ -643,7 +643,7 @@ color: blue;
     border: none;
     border-bottom: 1px solid rgba(128, 128, 128, 0.6);
 }
-.address-form input,button{
+.address-form input,button,textarea{
     padding:10px 10px 10px 5px;
 }
 .address-form{

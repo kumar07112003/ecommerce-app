@@ -8,16 +8,19 @@ import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import WholeNav from "./WholeNav";
 
-
-
 const AddToCart = () => {
-   let [cart, setCart] = useState([]);
-  
+  let [cart, setCart] = useState([]);
+
   let [saveCart, setSaveCart] = useState([]);
   let [showPopupPincode, setShowPopupPincode] = useState(false);
+  let [addressFormData, setAddressFormData] = useState({
+    name: "",
+    pincode: "",
+    address: "",
+  });
 
   let navigate = useNavigate();
-  
+
   useEffect(() => {
     async function fetchCart() {
       let res = await fetch(`${API_BASE_URL}/findAllCart`);
@@ -56,7 +59,7 @@ const AddToCart = () => {
   let saveAmount =
     Number(disCount) + Number(buyMore_saveMore) + Number(couponsForYou);
   console.log(saveAmount);
-    let totalDeliveryFee =
+  let totalDeliveryFee =
     delivery_Fee +
     protected_Fee -
     disCount +
@@ -73,6 +76,9 @@ const AddToCart = () => {
         return cart.id !== id;
       })
     );
+  }
+  function handleAddressForm(e) {
+    setAddressFormData({ ...addressFormData, [e.target.name]: e.target.value });
   }
   async function moveToCart(id) {
     let res = await fetch(`${API_BASE_URL}/saveCartLaterGetById/${id}`);
@@ -116,8 +122,6 @@ const AddToCart = () => {
     console.log(datas);
     setSaveCart([...saveCart, datas]);
   }
-  
- 
 
   return (
     <div className="displaycart">
@@ -135,16 +139,45 @@ const AddToCart = () => {
               Enter Delivery Pincode
             </button>
           </div>
-          {showPopupPincode &&  <div className="cancel"><MdCancelPresentation className="cancel_button"  onClick={
-                ()=>{setShowPopupPincode(false)}
-              } /></div>}
           {showPopupPincode && (
-            
-            <div className="enter-pincode" >
-               
+            <div className="cancel">
+              <MdCancelPresentation
+                className="cancel_button"
+                onClick={() => {
+                  setShowPopupPincode(false);
+                }}
+              />
+            </div>
+          )}
+          {showPopupPincode && (
+            <div className="enter-pincode">
               <h4>Enter Your Address & Pincode</h4>
-              <form className="address-form">
+              <form
+                className="address-form"
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  fetch(`${API_BASE_URL}/save_Address`, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(addressFormData),
+                  })
+                    .then((res) => res.text())
+                    .then((mes) => {
+                      alert(mes);
+                      console.log(mes);
+                    });
+                  alert("Address Added Successfully");
+                  setShowPopupPincode(false);
+                }}
+              >
                 <input
+                  type="text"
+                  name="name"
+                  placeholder="Enter Name"
+                  onChange={handleAddressForm}
+                />
+                <input
+                  onChange={handleAddressForm}
                   type="text"
                   name="pincode"
                   minLength={6}
@@ -153,6 +186,7 @@ const AddToCart = () => {
                   placeholder="Enter Pincode"
                 />
                 <textarea
+                  onChange={handleAddressForm}
                   required
                   name="address"
                   placeholder="Enter Your Adress"
@@ -210,10 +244,10 @@ const AddToCart = () => {
               className="place-order"
               disabled={cart.length === 0}
               onClick={() => {
-                navigate("/order",{state:{cart,totalDeliveryFee}});
+                navigate("/order");
               }}
-            >c
-              Place order
+            >
+              c Place order
             </button>
           </div>
         </div>

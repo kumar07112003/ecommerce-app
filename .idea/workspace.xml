@@ -6,11 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="720b83d5-cdd3-4038-8772-4b7787c6d6b7" name="Changes" comment="Initial commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/AddToCart.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/AddToCart.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/AddToCart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/AddToCart.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/Nav.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/Nav.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/Order.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/Order.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/Order.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/Order.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/Phone.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/Phone.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/phone.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/phone.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/E_com/WebsiteProject/User/Controller/Delivery_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/E_com/WebsiteProject/User/Controller/Delivery_Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/E_com/WebsiteProject/User/entity/DeliveryAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/E_com/WebsiteProject/User/entity/DeliveryAddress.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,6 +136,8 @@
       <workItem from="1766560295389" duration="641000" />
       <workItem from="1766731180645" duration="2109000" />
       <workItem from="1766903404651" duration="1757000" />
+      <workItem from="1766986622900" duration="2080000" />
+      <workItem from="1767245698697" duration="3089000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
